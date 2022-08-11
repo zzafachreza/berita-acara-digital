@@ -28,13 +28,13 @@ export default function ({ navigation, route }) {
 
     const _kirimAPI = () => {
 
-        // setLoading(true);
+        setLoading(true);
         console.error(kirim);
 
         axios.post(apiURL + 'add.php', kirim).then(res => {
             console.log(res.data)
             setLoading(false);
-
+            navigation.replace('Home');
 
 
         })
